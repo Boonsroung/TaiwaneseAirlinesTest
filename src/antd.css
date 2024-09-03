@@ -1,0 +1,18 @@
+/* custom Input */
+.ant-input-group-wrapper.clear-addon-after .ant-input-wrapper .ant-input-group-addon {
+  background: transparent !important;
+}
+
+.ant-input-group-wrapper.clear-addon-after .ant-input-wrapper input {
+  border-inline-end: 0 !important;
+}
+
+/* collapse */
+.collapse-no-padding-item .ant-collapse-item .ant-collapse-content .ant-collapse-content-box {
+  padding: 0 !important;
+}
+
+.collapse-no-padding-item .ant-collapse-item .ant-collapse-header {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
