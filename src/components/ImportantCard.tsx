@@ -126,7 +126,7 @@ export default function ImportantCard({ className }: ImportantCardProps) {
             <br />
             <li>{t('policy_4_6')}</li>
             <li>{t('policy_4_6_detail')}</li>
-            <br />  
+            <br />
             <li>{t('policy_4_7')}</li>
             <li>{t('policy_4_7_detail')}</li>
             <br />
@@ -222,13 +222,16 @@ export default function ImportantCard({ className }: ImportantCardProps) {
   return (
     <Card
       title={
-        <Typography.Title level={4} className='!m-0 !text-blue-primary'>
-          {t('important')}
-        </Typography.Title>
+        <div className='border-b border-gray-300'>
+          <Typography.Title level={4} className='!m-0 !text-blue-primary'>
+            {t('important')}
+          </Typography.Title>
+        </div>
       }
-      className={className}
+      className={`border-none ${className}`}
     >
       <Collapse items={items} ghost accordion className='collapse-no-padding-item' />
     </Card>
+
   );
 }

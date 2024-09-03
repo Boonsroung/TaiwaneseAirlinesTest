@@ -156,7 +156,7 @@ export default function HomePage() {
         </Card>
         <CardTabs defaultActiveKey='1' items={tabItems} />
         <ImportantCard />
-        <ContactUsCard />
+        <ContactUsCard/>
       </div>
     </ContainerPageWrapper>
   )

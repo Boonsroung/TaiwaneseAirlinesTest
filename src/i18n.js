@@ -157,7 +157,7 @@ const resources = {
   th: {
     translation: {
       "read": "อ่าน",
-      "departure_from_bangkok": "ออกจากกรุงเทพ",
+      "departure_from_bangkok": "ออกเดินทางจากกรุงเทพ",
       "how_to_get_voucher_code": "วิธีการรับโค้ดวอยเชอร์",
       "buy_2_get_1": "ซื้อ 2 แถม 1",
       "condition": "เงื่อนไข",

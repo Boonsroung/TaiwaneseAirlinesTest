@@ -13,10 +13,11 @@ export default function ContactUsCard({ className }: ContactUsCardProps) {
     <Card
       className={className}
       title={
-        <Typography.Title level={4} className='!m-0 !text-blue-primary'>
+        <Typography.Title level={4} className='!mt-10 !text-blue-primary'>
           {t('contact_us')}
         </Typography.Title>
       }
+      headStyle={{ borderBottom: 'none' }}
     >
       <div className='bg-blue-bg p-8'>
         <ContentItem label={t('tel')} labelClass='text-[16px]'>

@@ -1,9 +1,9 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom'
-
-import App from './App'
-import HomePage from './pages/HomePage'
-import ResultPage from './pages/ResultPage'
-
+// App.router.tsx
+import { createBrowserRouter, Navigate } from 'react-router-dom';
+import App from './App';
+import HomePage from './pages/HomePage';
+import ResultPage from './pages/ResultPage';
+import PageWrapper from './components/PageWrapper';
 
 const router = createBrowserRouter([
   {
@@ -16,21 +16,22 @@ const router = createBrowserRouter([
       },
       {
         path: '/home',
-        element: <HomePage />,
-        handle: {
-          pageName: 'Departure from Bangkok',
-          visiblePartnerLogo: true
-        }
+        element: (
+          <PageWrapper pageNameKey='departure_from_bangkok' visiblePartnerLogo={true}>
+            <HomePage />
+          </PageWrapper>
+        )
       },
       {
         path: '/result',
-        element: <ResultPage />,
-        handle: {
-          pageName: 'Departure from Bangkok'
-        }
+        element: (
+          <PageWrapper pageNameKey='departure_from_bangkok'  visiblePartnerLogo={true}>
+            <ResultPage />
+          </PageWrapper>
+        )
       }
     ]
   }
-])
+]);
 
-export default router
+export default router;
