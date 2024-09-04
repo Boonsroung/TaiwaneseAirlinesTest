@@ -230,10 +230,13 @@ export default function ImportantCard({ className }: ImportantCardProps) {
   return (
     <Card
       title={
-        <div className='border-b border-gray-300'>
+        <div className='relative'>
           <Typography.Title level={4} className='!m-0 !text-blue-primary !ml-4 !mt-8'>
             {t('important')}
           </Typography.Title>
+          <div className='bg-white px-4'>
+            <div className='border-b border-gray-300 mt-2' />
+          </div>
         </div>
       }
       className={className}
@@ -241,5 +244,6 @@ export default function ImportantCard({ className }: ImportantCardProps) {
     >
       <Collapse items={items} ghost accordion className='collapse-no-padding-item' />
     </Card>
+
   );
 }

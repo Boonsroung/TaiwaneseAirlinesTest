@@ -15,10 +15,10 @@ export default function ResultPage() {
         <Card
           title={
             <div className='py-[24px]'>
-              <Typography.Title level={4} className='!m-0 !text-blue-primary'>
+              <Typography.Title level={4} className='!m-0 !text-blue-primary !ml-4 !mt-4'>
                 {t('congratulations') + '!'}
               </Typography.Title>
-              <Typography.Title level={4} className='!m-0 !mt-4 !font-normal'>
+              <Typography.Title level={4} className='!m-0 !mt-4 !font-normal !ml-4 !mt-4'>
                 {t('please_check_your_email_box')}
               </Typography.Title>
             </div>
@@ -26,20 +26,20 @@ export default function ResultPage() {
         >
           <div className='grid lg:grid-cols-3 gap-2 lg:gap-6'>
             <div className='bg-blue-bg p-[24px]'>
-              <Typography.Text>{t('applied_date_time')}</Typography.Text>
-              <Typography.Title className='!text-primary' level={4}>
+              <Typography.Text className='text-[16px]'>{t('applied_date_time')}</Typography.Text>
+              <Typography.Title className='!text-primary !mt-10' level={2}>
                 2024-08-22 <br />20:11:59 GMT+7
               </Typography.Title>
             </div>
             <div className='bg-blue-bg p-[24px]'>
-              <Typography.Text>{t('your_applicant_code')}</Typography.Text>
-              <Typography.Title className='!text-primary' level={4}>
+              <Typography.Text className='text-[16px]'>{t('your_applicant_code')}</Typography.Text>
+              <Typography.Title className='!text-primary !mt-20' level={2}>
                 TH0001
               </Typography.Title>
             </div>
             <div className='bg-blue-bg p-[24px]'>
-              <Typography.Text>{t('your_voucher_code_is')}</Typography.Text>
-              <Typography.Title className='!text-primary' level={4}>
+              <Typography.Text className='text-[16px]'>{t('your_voucher_code_is')}</Typography.Text>
+              <Typography.Title className='!text-primary !mt-20' level={2}>
                 XczuemTG
               </Typography.Title>
             </div>
