@@ -2,8 +2,8 @@ import { useMatches } from 'react-router-dom';
 import { Typography } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { RouterHandleData } from '../types/router-handle.type';
-import chinaAirlinesLogo from '../assets/images/china-airlines-logo.png';
-import taiwanLogo from '../assets/images/taiwan-logo.png';
+import chinaAirlinesLogo from '../assets/images/01 CI_Sig_AD.png';  // ใช้เส้นทางสัมพัทธ์
+import taiwanLogo from '../assets/images/LogoLockup-Orange.png';    // ใช้เส้นทางสัมพัทธ์
 
 export default function HeaderInfo() {
   const { i18n } = useTranslation();
