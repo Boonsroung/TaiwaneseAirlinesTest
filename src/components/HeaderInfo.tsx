@@ -17,38 +17,26 @@ export default function HeaderInfo() {
 
   return (
     <>
-      <div className='flex flex-row gap-4 items-center mt-8 justify-center'>
-        <img src={chinaAirlinesLogo} className='w-[338.82px] h-[96px]' alt='China Airlines logo' />
-        <img src={taiwanLogo} className='w-[301.83px] h-[96px]' alt='Taiwan logo' />
+      {/* โลโก้ ไม่มีช่องว่างระหว่างกัน */}
+      <div className='flex flex-row gap-0 items-center mt-8 justify-center max-w-full px-4'>
+        <img
+          src={chinaAirlinesLogo}
+          className='w-[250px] sm:w-[300px] lg:w-[338.82px] h-auto'
+          alt='China Airlines logo'
+        />
+        <img
+          src={taiwanLogo}
+          className='w-[220px] sm:w-[280px] lg:w-[301.83px] h-auto'
+          alt='Taiwan logo'
+        />
       </div>
 
-      <div className='text-center justify-center flex gap-2 mt-10'>
-        <Typography.Title
-          level={4}
-          className={`cursor-pointer !m-0 !font-normal ${i18n.language === 'th' ? '!text-primary' : '!text-[#D8D8D8]'}`}
-          style={{ fontFamily: 'Noto Sans, sans-serif' }}  // ฟอนต์เหมือนกันทั้งภาษาไทยและอังกฤษ
-          onClick={() => changeLanguage('th')}
-        >
-          ภาษาไทย
-        </Typography.Title>
-        <Typography.Title
-          level={4}
-          className='!m-0 !font-normal !text-[#D8D8D8]'
-        >
-          |
-        </Typography.Title>
-        <Typography.Title
-          level={4}
-          className={`cursor-pointer !m-0 !font-normal ${i18n.language === 'en' ? '!text-primary' : '!text-[#D8D8D8]'}`}
-          style={{ fontFamily: 'Noto Sans, sans-serif' }}  // ฟอนต์เหมือนกันทั้งภาษาไทยและอังกฤษ
-          onClick={() => changeLanguage('en')}
-        >
-          English
-        </Typography.Title>
-      </div>
-
+      {/* ชื่อหน้า */}
       {pageInfo?.pageName && (
-        <Typography.Title level={3} className='text-center !text-blue-primary mt-10'>
+        <Typography.Title
+          level={3}
+          className='text-center !text-blue-primary mt-10 px-4'
+        >
           {pageInfo.pageName}
           <img
             className='align-middle ml-4'
@@ -59,6 +47,34 @@ export default function HeaderInfo() {
           />
         </Typography.Title>
       )}
+
+      {/* ปุ่มเปลี่ยนภาษา */}
+      <div className='flex justify-center mt-10'>
+        <div className='flex gap-2 items-center'>
+          <Typography.Title
+            level={4}
+            className={`cursor-pointer !m-0 !font-normal ${i18n.language === 'th' ? '!text-primary' : '!text-[#D8D8D8]'}`}
+            style={{ fontFamily: 'Noto Sans, sans-serif' }}
+            onClick={() => changeLanguage('th')}
+          >
+            ภาษาไทย
+          </Typography.Title>
+          <Typography.Title
+            level={4}
+            className='!m-0 !font-normal !text-[#D8D8D8]'
+          >
+            |
+          </Typography.Title>
+          <Typography.Title
+            level={4}
+            className={`cursor-pointer !m-0 !font-normal ${i18n.language === 'en' ? '!text-primary' : '!text-[#D8D8D8]'}`}
+            style={{ fontFamily: 'Noto Sans, sans-serif' }}
+            onClick={() => changeLanguage('en')}
+          >
+            English
+          </Typography.Title>
+        </div>
+      </div>
     </>
   );
 }
