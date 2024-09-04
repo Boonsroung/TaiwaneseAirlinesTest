@@ -4,6 +4,7 @@ import App from './App';
 import HomePage from './pages/HomePage';
 import ResultPage from './pages/ResultPage';
 import PageWrapper from './components/PageWrapper';
+import './index.css'
 
 const router = createBrowserRouter([
   {

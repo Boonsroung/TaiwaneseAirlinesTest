@@ -24,7 +24,7 @@ export default function ResultPage() {
             </div>
           }
         >
-          <div className='grid lg:grid-cols-3 gap-2 lg:gap-6'>
+          <div className='grid lg:grid-cols-3 gap-2 lg:gap-6 !ml-4'>
             <div className='bg-blue-bg p-[24px]'>
               <Typography.Text className='text-[16px]'>{t('applied_date_time')}</Typography.Text>
               <Typography.Title className='!text-primary !mt-10' level={2}>
@@ -44,7 +44,7 @@ export default function ResultPage() {
               </Typography.Title>
             </div>
           </div>
-          <hr style={{ borderColor: '#D8D8D8', borderWidth: '1px', borderStyle: 'solid' }} className='mt-3'/>
+          <hr style={{ borderColor: '#D8D8D8', borderWidth: '1px', borderStyle: 'solid' }} className='mt-4 ml-4'/>
           <div className='text-center mt-5'>
             <Link to='/result'>
               <Button type='primary' className='min-w-[300px]'>

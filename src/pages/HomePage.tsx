@@ -99,13 +99,13 @@ export default function HomePage() {
         <div className='flex gap-x-4 !ml-8'>
           <Form.Item
             label={t('your_applicant_code')}
-            extra={<div className='mt-4'>{t('enter_your_applicant_code_alert')}</div>}
+            extra={<div className='mt-2'>{t('enter_your_applicant_code_alert')}</div>}
           >
             <Input placeholder={t('enter_applicant_code')} />
           </Form.Item>
           <Form.Item label={' '}>
             <Link to='/result'>
-              <Button type='primary'>{t('submit')}</Button>
+              <Button type='primary' className='min-w-[130px]'>{t('submit')}</Button>
             </Link>
           </Form.Item>
         </div>

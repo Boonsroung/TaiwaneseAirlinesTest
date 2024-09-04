@@ -10,6 +10,12 @@ export default {
       xxl: '1400px'
     },
     extend: {
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+      },
+      fontWeight: {
+        normal: 400,
+      },
       colors: {
         blue: {
           bg: '#F4F7FF',
