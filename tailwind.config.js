@@ -10,10 +10,15 @@ export default {
       xxl: "1400px",
     },
     extend: {
-      roboto: ["Roboto", "sans-serif"],
-      noto: ["Noto Sans Thai", "sans-serif"],
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'], // ใช้ Roboto เป็นฟอนต์หลัก
+      },
       fontWeight: {
         normal: 400,
+      },
+      padding: {
+        'default': '16px',  // กำหนด padding เริ่มต้นสำหรับทุกอุปกรณ์
+        'lg': '32px',       // กำหนด padding สำหรับหน้าจอขนาดใหญ่
       },
       colors: {
         blue: {
@@ -32,14 +37,20 @@ export default {
           maxWidth: "100%",
           marginLeft: "auto",
           marginRight: "auto",
+          paddingLeft: "16px",  // กำหนด padding ด้านซ้าย
+          paddingRight: "16px", // กำหนด padding ด้านขวา
           "@screen sm": {
             maxWidth: "540px",
           },
           "@screen md": {
             maxWidth: "720px",
+            paddingLeft: "24px",  // สำหรับขนาดหน้าจอใหญ่ขึ้น
+            paddingRight: "24px",
           },
           "@screen lg": {
             maxWidth: "960px",
+            paddingLeft: "32px",  // สำหรับหน้าจอใหญ่ขึ้น
+            paddingRight: "32px",
           },
           "@screen xl": {
             maxWidth: "1140px",

@@ -26,7 +26,7 @@ export default function HeaderInfo() {
         <Typography.Title
           level={4}
           className={`cursor-pointer !m-0 !font-normal ${i18n.language === 'th' ? '!text-primary' : '!text-[#D8D8D8]'}`}
-          style={{ fontFamily: 'Noto Sans Thai, sans-serif' }}
+          style={{ fontFamily: 'Noto Sans, sans-serif' }}  // ฟอนต์เหมือนกันทั้งภาษาไทยและอังกฤษ
           onClick={() => changeLanguage('th')}
         >
           ภาษาไทย
@@ -40,7 +40,7 @@ export default function HeaderInfo() {
         <Typography.Title
           level={4}
           className={`cursor-pointer !m-0 !font-normal ${i18n.language === 'en' ? '!text-primary' : '!text-[#D8D8D8]'}`}
-          style={{ fontFamily: 'Roboto, sans-serif' }}
+          style={{ fontFamily: 'Noto Sans, sans-serif' }}  // ฟอนต์เหมือนกันทั้งภาษาไทยและอังกฤษ
           onClick={() => changeLanguage('en')}
         >
           English
