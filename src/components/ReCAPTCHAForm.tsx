@@ -9,14 +9,14 @@ interface ReCAPTCHAFormProps {
 export default function ReCAPTCHAForm({ centered, onChange }: ReCAPTCHAFormProps) {
   return (
     <div className={clsx({ 'flex justify-center': centered })}>
-      {/* <ReCAPTCHA
+      <ReCAPTCHA
         sitekey={import.meta.env.VITE_APP_RECAPTCHA_KEY}
         onChange={(value: string | null) => {
           if (onChange) {
             onChange(value || undefined)
           }
         }}
-      /> */}
+      />
     </div>
   )
 }
