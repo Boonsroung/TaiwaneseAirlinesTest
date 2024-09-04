@@ -2,8 +2,8 @@ import { useMatches } from 'react-router-dom';
 import { Typography } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { RouterHandleData } from '../types/router-handle.type';
-import chinaAirlinesLogo from '../assets/images/01 CI_Sig_AD.png';  // ใช้เส้นทางสัมพัทธ์
-import taiwanLogo from '../assets/images/LogoLockup-Orange.png';    // ใช้เส้นทางสัมพัทธ์
+import chinaAirlinesLogo from '../assets/images/01 CI_Sig_AD.png';
+import taiwanLogo from '../assets/images/LogoLockup-Orange.png';
 
 export default function HeaderInfo() {
   const { i18n } = useTranslation();
@@ -19,29 +19,34 @@ export default function HeaderInfo() {
     <>
       <div className='flex flex-row gap-4 items-center mt-8 justify-center'>
         <img src={chinaAirlinesLogo} className='w-[338.82px] h-[96px]' alt='China Airlines logo' />
-        <br /><br />
         <img src={taiwanLogo} className='w-[301.83px] h-[96px]' alt='Taiwan logo' />
       </div>
 
-      <div className='text-center justify-center flex gap-4 mt-10'>
+      <div className='text-center justify-center flex gap-2 mt-10'>
         <Typography.Title
           level={4}
-          className={`cursor-pointer !m-0 !font-normal font-noto ${i18n.language === 'th' ? '!text-primary' : ''}`}
+          className={`cursor-pointer !m-0 !font-normal ${i18n.language === 'th' ? '!text-primary' : '!text-[#D8D8D8]'}`}
+          style={{ fontFamily: 'Noto Sans Thai, sans-serif' }}
           onClick={() => changeLanguage('th')}
         >
           ภาษาไทย
         </Typography.Title>
-        <Typography.Title level={4} className='!m-0 !font-normal !text-[#D8D8D8]'>
+        <Typography.Title
+          level={4}
+          className='!m-0 !font-normal !text-[#D8D8D8]'
+        >
           |
         </Typography.Title>
         <Typography.Title
           level={4}
-          className={`cursor-pointer !m-0 !font-normal ${i18n.language === 'en' ? '!text-primary' : ''}`}
+          className={`cursor-pointer !m-0 !font-normal ${i18n.language === 'en' ? '!text-primary' : '!text-[#D8D8D8]'}`}
+          style={{ fontFamily: 'Roboto, sans-serif' }}
           onClick={() => changeLanguage('en')}
         >
           English
         </Typography.Title>
       </div>
+
       {pageInfo?.pageName && (
         <Typography.Title level={3} className='text-center !text-blue-primary mt-10'>
           {pageInfo.pageName}
