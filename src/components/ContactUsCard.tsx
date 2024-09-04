@@ -13,7 +13,7 @@ export default function ContactUsCard({ className }: ContactUsCardProps) {
     <Card
       className={className}
       title={
-        <Typography.Title level={4} className='!mt-10 !text-blue-primary !ml-4 !mb-1'>
+        <Typography.Title level={4} className='!mt-10 !text-blue-primary !ml-4 !mb-1 font-noto'>
           {t('contact_us')}
         </Typography.Title>
       }

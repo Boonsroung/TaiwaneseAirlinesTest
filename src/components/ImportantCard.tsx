@@ -13,16 +13,16 @@ export default function ImportantCard({ className }: ImportantCardProps) {
     {
       key: '0',
       label: (
-        <div className='ml-4 font-bold'>
+        <div className='ml-4 font-bold font-noto'>
           {t('disclaimers_clauses')}
         </div>
       ),
       children: (
-        <div className='bg-blue-bg p-8'>
+        <div className='bg-blue-bg p-8 font-noto'>
           <Typography.Title level={5} className='text-center mt-0'>
             {t('disclaimers_clauses')}
           </Typography.Title>
-          <p className='m-0 mt-6'>
+          <p className='m-0 mt-6 font-noto'>
             {t('disclaimers_clauses_detail')}
           </p>
         </div>
@@ -38,13 +38,13 @@ export default function ImportantCard({ className }: ImportantCardProps) {
     {
       key: '1',
       label: (
-        <div className='ml-4 font-bold'>
+        <div className='ml-4 font-bold font-noto'>
           {t('privacy_policies')}
         </div>
       ),
       children: (
         <div className='bg-blue-bg p-8'>
-          <Typography.Title level={5} className='text-center mt-0'>
+          <Typography.Title level={5} className='text-center mt-0 font-noto'>
             {t('privacy_policies')}
           </Typography.Title>
           <p className='m-0 mt-6'>
@@ -231,7 +231,7 @@ export default function ImportantCard({ className }: ImportantCardProps) {
     <Card
       title={
         <div className='relative'>
-          <Typography.Title level={4} className='!m-0 !text-blue-primary !ml-4 !mt-8'>
+          <Typography.Title level={4} className='!m-0 !text-blue-primary !ml-4 !mt-8 font-noto'>
             {t('important')}
           </Typography.Title>
           <div className='bg-white px-4'>

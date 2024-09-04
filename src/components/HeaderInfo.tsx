@@ -26,7 +26,7 @@ export default function HeaderInfo() {
       <div className='text-center justify-center flex gap-4 mt-10'>
         <Typography.Title
           level={4}
-          className={`cursor-pointer !m-0 !font-normal ${i18n.language === 'th' ? '!text-primary' : ''}`}
+          className={`cursor-pointer !m-0 !font-normal font-noto ${i18n.language === 'th' ? '!text-primary' : ''}`}
           onClick={() => changeLanguage('th')}
         >
           ภาษาไทย

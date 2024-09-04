@@ -16,57 +16,57 @@ export default function HomePage() {
 
   const FirstTimeApplyTab = (
     <Form layout='vertical' variant='filled'>
-      <Typography.Title className='!text-blue-primary !mb-6 mt-5 ml-10 text-[20px]' level={4}>
+      <Typography.Title className='!text-blue-primary !mb-6 mt-5 ml-10 text-[20px] font-noto' level={4}>
         {t('applicant_contact')}
       </Typography.Title>
       <div className='grid lg:grid-cols-2 gap-x-10'>
         <Form.Item label={t('mobile_number')} className='!ml-10'>
-          <Input placeholder={t('enter_mobile_number')} />
+          <Input placeholder={t('enter_mobile_number')} className='font-noto' />
         </Form.Item>
         <Form.Item label={t('email')} className='!ml-10'>
-          <Input type='email' placeholder={`${t('ex')} example888@hotmail.com`} />
+          <Input type='email' placeholder={`${t('ex')} example888@hotmail.com`} className='font-noto'/>
         </Form.Item>
       </div>
       <Divider />
-      <Typography.Title level={4} className='!mb-6 !ml-10'>
+      <Typography.Title level={4} className='!mb-6 !ml-10 font-noto'>
         {`${t('applicant')} #1`}
       </Typography.Title>
       <div className='grid lg:grid-cols-2 gap-x-10'>
         <Form.Item label={t('first_name')} className='!ml-10'>
-          <Input placeholder={t('enter_first_name')} />
+          <Input placeholder={t('enter_first_name')} className='font-noto'/>
         </Form.Item>
         <Form.Item label={t('last_name')} className='!ml-10'>
-          <Input placeholder={t('enter_last_name')} />
+          <Input placeholder={t('enter_last_name')} className='font-noto'/>
         </Form.Item>
         <Form.Item label={t('country_code')} className='!ml-10'>
-          <Select placeholder={t('select_country_code')} />
+          <Select placeholder={t('select_country_code')}  />
         </Form.Item>
       </div>
       <Divider />
-      <Typography.Title level={4} className='!mb-6 !ml-10' >
+      <Typography.Title level={4} className='!mb-6 !ml-10 font-noto' >
         {`${t('applicant')} #2`}
       </Typography.Title>
       <div className='grid lg:grid-cols-2 gap-x-10'>
         <Form.Item label={t('first_name')} className='!ml-10'>
-          <Input placeholder={t('enter_first_name')} />
+          <Input placeholder={t('enter_first_name')} className='font-noto'/>
         </Form.Item>
         <Form.Item label={t('last_name')} className='!ml-10'>
-          <Input placeholder={t('enter_last_name')} />
+          <Input placeholder={t('enter_last_name')} className='font-noto'/>
         </Form.Item>
         <Form.Item label={t('country_code')} className='!ml-10'>
           <Select placeholder={t('select_country_code')} />
         </Form.Item>
       </div>
       <Divider />
-      <Typography.Title level={4} className='!mb-6 !ml-10'>
+      <Typography.Title level={4} className='!mb-6 !ml-10 font-noto'>
         {`${t('applicant')} #3`}
       </Typography.Title>
       <div className='grid lg:grid-cols-2 gap-x-10'>
         <Form.Item label={t('first_name')} className='!ml-10'>
-          <Input placeholder={t('enter_first_name')} />
+          <Input placeholder={t('enter_first_name')} className='font-noto' />
         </Form.Item>
         <Form.Item label={t('last_name')} className='!ml-10'>
-          <Input placeholder={t('enter_last_name')} />
+          <Input placeholder={t('enter_last_name')} className='font-noto' />
         </Form.Item>
         <Form.Item label={t('country_code')} className='!ml-10'>
           <Select placeholder={t('select_country_code')} />
@@ -138,7 +138,7 @@ export default function HomePage() {
             <div className='flex flex-col gap-2'>
               <Typography.Title
                 level={3}
-                className='!text-blue-primary !m-0 !mt-5 !ml-5'
+                className='!text-blue-primary !m-0 !mt-5 !ml-5 font-noto'
               >
                 {t("how_to_get_voucher_code")} <br />
                 <h1 className='mt-3' style={{ color: '#3E62AD' }}>{t("buy_2_get_1")}</h1>
