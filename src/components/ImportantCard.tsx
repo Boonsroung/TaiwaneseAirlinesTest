@@ -12,7 +12,11 @@ export default function ImportantCard({ className }: ImportantCardProps) {
   const items: CollapseProps['items'] = [
     {
       key: '0',
-      label: t('disclaimers_clauses'),
+      label: (
+        <div className='ml-4 font-bold'>
+          {t('disclaimers_clauses')}
+        </div>
+      ),
       children: (
         <div className='bg-blue-bg p-8'>
           <Typography.Title level={5} className='text-center mt-0'>
@@ -33,7 +37,11 @@ export default function ImportantCard({ className }: ImportantCardProps) {
     },
     {
       key: '1',
-      label: t('privacy_policies'),
+      label: (
+        <div className='ml-4 font-bold'>
+          {t('privacy_policies')}
+        </div>
+      ),
       children: (
         <div className='bg-blue-bg p-8'>
           <Typography.Title level={5} className='text-center mt-0'>
@@ -223,15 +231,15 @@ export default function ImportantCard({ className }: ImportantCardProps) {
     <Card
       title={
         <div className='border-b border-gray-300'>
-          <Typography.Title level={4} className='!m-0 !text-blue-primary'>
+          <Typography.Title level={4} className='!m-0 !text-blue-primary !ml-4 !mt-8'>
             {t('important')}
           </Typography.Title>
         </div>
       }
-      className={`border-none ${className}`}
+      className={className}
+      headStyle={{ borderBottom: 'none' }}
     >
       <Collapse items={items} ghost accordion className='collapse-no-padding-item' />
     </Card>
-
   );
 }

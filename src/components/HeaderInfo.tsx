@@ -17,13 +17,12 @@ export default function HeaderInfo() {
 
   return (
     <>
-      {pageInfo?.visiblePartnerLogo && (
-        <div className='flex flex-row gap-4 items-center mt-8 justify-center'>
-          <img src={chinaAirlinesLogo} className='h-[40px] lg:h-[96px]' alt='China Airlines logo' />
-          <img src={taiwanLogo} className='h-[25px] lg:h-[64px]' alt='Taiwan logo' />
-        </div>
+      <div className='flex flex-row gap-4 items-center mt-8 justify-center'>
+        <img src={chinaAirlinesLogo} className='w-[338.82px] h-[96px]' alt='China Airlines logo' />
+        <br /><br />
+        <img src={taiwanLogo} className='w-[301.83px] h-[96px]' alt='Taiwan logo' />
+      </div>
 
-      )}
       <div className='text-center justify-center flex gap-4 mt-10'>
         <Typography.Title
           level={4}

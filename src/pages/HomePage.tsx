@@ -12,66 +12,68 @@ import { useTranslation } from 'react-i18next'
 export default function HomePage() {
   const { t } = useTranslation();
 
+  const condition3 = t("condition_3");
+
   const FirstTimeApplyTab = (
     <Form layout='vertical' variant='filled'>
-      <Typography.Title className='!text-blue-primary !mb-6' level={4}>
+      <Typography.Title className='!text-blue-primary !mb-6 mt-5 ml-10 text-[20px]' level={4}>
         {t('applicant_contact')}
       </Typography.Title>
       <div className='grid lg:grid-cols-2 gap-x-10'>
-        <Form.Item label={t('mobile_number')}>
+        <Form.Item label={t('mobile_number')} className='!ml-10'>
           <Input placeholder={t('enter_mobile_number')} />
         </Form.Item>
-        <Form.Item label={t('email')}>
+        <Form.Item label={t('email')} className='!ml-10'>
           <Input type='email' placeholder={`${t('ex')} example888@hotmail.com`} />
         </Form.Item>
       </div>
       <Divider />
-      <Typography.Title level={4} className='!mb-6'>
+      <Typography.Title level={4} className='!mb-6 !ml-10'>
         {`${t('applicant')} #1`}
       </Typography.Title>
       <div className='grid lg:grid-cols-2 gap-x-10'>
-        <Form.Item label={t('first_name')}>
+        <Form.Item label={t('first_name')} className='!ml-10'>
           <Input placeholder={t('enter_first_name')} />
         </Form.Item>
-        <Form.Item label={t('last_name')}>
+        <Form.Item label={t('last_name')} className='!ml-10'>
           <Input placeholder={t('enter_last_name')} />
         </Form.Item>
-        <Form.Item label={t('country_code')}>
+        <Form.Item label={t('country_code')} className='!ml-10'>
           <Select placeholder={t('select_country_code')} />
         </Form.Item>
       </div>
       <Divider />
-      <Typography.Title level={4} className='!mb-6'>
+      <Typography.Title level={4} className='!mb-6 !ml-10' >
         {`${t('applicant')} #2`}
       </Typography.Title>
       <div className='grid lg:grid-cols-2 gap-x-10'>
-        <Form.Item label={t('first_name')}>
+        <Form.Item label={t('first_name')} className='!ml-10'>
           <Input placeholder={t('enter_first_name')} />
         </Form.Item>
-        <Form.Item label={t('last_name')}>
+        <Form.Item label={t('last_name')} className='!ml-10'>
           <Input placeholder={t('enter_last_name')} />
         </Form.Item>
-        <Form.Item label={t('country_code')}>
+        <Form.Item label={t('country_code')} className='!ml-10'>
           <Select placeholder={t('select_country_code')} />
         </Form.Item>
       </div>
       <Divider />
-      <Typography.Title level={4} className='!mb-6'>
-        {`${t('applicant')} #2`}
+      <Typography.Title level={4} className='!mb-6 !ml-10'>
+        {`${t('applicant')} #3`}
       </Typography.Title>
       <div className='grid lg:grid-cols-2 gap-x-10'>
-        <Form.Item label={t('first_name')}>
+        <Form.Item label={t('first_name')} className='!ml-10'>
           <Input placeholder={t('enter_first_name')} />
         </Form.Item>
-        <Form.Item label={t('last_name')}>
+        <Form.Item label={t('last_name')} className='!ml-10'>
           <Input placeholder={t('enter_last_name')} />
         </Form.Item>
-        <Form.Item label={t('country_code')}>
+        <Form.Item label={t('country_code')} className='!ml-10'>
           <Select placeholder={t('select_country_code')} />
         </Form.Item>
       </div>
       <Divider />
-      <Form.Item name='remember' valuePropName='checked'>
+      <Form.Item name='remember' valuePropName='checked' className='!ml-10'>
         <Checkbox className='!text-lg'>{t('this_is_to_certify_that_i_do_not_hold_a_taiwan_passport')}</Checkbox>
       </Form.Item>
       <Divider />
@@ -90,14 +92,14 @@ export default function HomePage() {
 
   const AlreadyAppliedTab = (
     <Form layout='vertical' variant='filled'>
-      <Typography.Title className='!text-blue-primary !mb-6' level={4}>
+      <Typography.Title className='!text-blue-primary !mb-6 !ml-8' level={4}>
         {t('your_applicant_code')}
       </Typography.Title>
       <div className='grid lg:grid-cols-2'>
-        <div className='flex gap-x-4'>
+        <div className='flex gap-x-4 !ml-8'>
           <Form.Item
             label={t('your_applicant_code')}
-            extra={t('enter_your_applicant_code_alert')}
+            extra={<div className='mt-4'>{t('enter_your_applicant_code_alert')}</div>}
           >
             <Input placeholder={t('enter_applicant_code')} />
           </Form.Item>
@@ -134,20 +136,24 @@ export default function HomePage() {
         <Card className='!card-shadow'>
           <div className='grid grid-cols-1 lg:grid-cols-1 gap-6'>
             <div className='flex flex-col gap-2'>
-              <Typography.Title level={3} className='!text-blue-primary !m-0'>
-                {t("how_to_get_voucher_code")} <br /> <h1 style={{ color: '#3E62AD' }}>{t("buy_2_get_1")}</h1>
+              <Typography.Title
+                level={3}
+                className='!text-blue-primary !m-0 !mt-5 !ml-5'
+              >
+                {t("how_to_get_voucher_code")} <br />
+                <h1 className='mt-3' style={{ color: '#3E62AD' }}>{t("buy_2_get_1")}</h1>
                 <hr />
               </Typography.Title>
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
-                <Typography.Title level={5} className='!font-normal !m-0 lg:block'>
+                <Typography.Title level={5} className='!font-normal !m-0 lg:block !ml-5'>
                   <li className='underline mb-1'>{t("condition")}</li>
-                  <li>1. {t("condition_1")}</li>
-                  <li>2. {t("condition_2")}</li>
-                  <li>3. {t("condition_3")}</li>
-                  <li>4. {t("condition_4")}</li>
-                  <li>5. {t("condition_5")}</li>
-                  <li>6. {t("condition_6")}</li>
-                  <li>7. {t("condition_7")}</li>
+                  <li className='ml-2'>1. {t("condition_1")}</li>
+                  <li className='ml-2'>2. {t("condition_2")}</li>
+                  <li className='ml-2' dangerouslySetInnerHTML={{ __html: `3. ${condition3}` }} />
+                  <li className='ml-2'>4. {t("condition_4")}</li>
+                  <li className='ml-2'>5. {t("condition_5")}</li>
+                  <li className='ml-2'>6. {t("condition_6")}</li>
+                  <li className='ml-2'>7. {t("condition_7")}</li>
                 </Typography.Title>
                 <img className='w-full' src='/images/ic-demo-passport.webp' alt='demo passport' />
               </div>
@@ -156,7 +162,7 @@ export default function HomePage() {
         </Card>
         <CardTabs defaultActiveKey='1' items={tabItems} />
         <ImportantCard />
-        <ContactUsCard/>
+        <ContactUsCard />
       </div>
     </ContainerPageWrapper>
   )

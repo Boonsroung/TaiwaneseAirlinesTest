@@ -22,7 +22,6 @@ const PageWrapper: React.FC<PageWrapperProps> = ({ children, pageNameKey, visibl
             </h1>
             {children}
         </div>
-
     );
 };
 
