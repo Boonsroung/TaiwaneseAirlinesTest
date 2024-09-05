@@ -19,41 +19,41 @@ export default function HomePage() {
       <Typography.Title className='!text-blue-primary !mb-6 mt-5 ml-10 text-[20px] font-noto' level={4}>
         {t('applicant_contact')}
       </Typography.Title>
-      <div className='grid lg:grid-cols-2 gap-x-10'>
-        <Form.Item label={t('mobile_number')} className='!ml-10'>
+      <div className='grid lg:grid-cols-2 gap-6'>
+        <Form.Item label={t('mobile_number')} className='!ml-10 !mr-7'>
           <Input placeholder={t('enter_mobile_number')} className='font-noto' />
         </Form.Item>
-        <Form.Item label={t('email')} className='!ml-10'>
-          <Input type='email' placeholder={`${t('ex')} example888@hotmail.com`} className='font-noto'/>
+        <Form.Item label={t('email')} className='!ml-10 !mr-7'>
+          <Input type='email' placeholder={`${t('ex')} example888@hotmail.com`} className='font-noto' />
         </Form.Item>
       </div>
       <Divider />
       <Typography.Title level={4} className='!mb-6 !ml-10 font-noto'>
         {`${t('applicant')} #1`}
       </Typography.Title>
-      <div className='grid lg:grid-cols-2 gap-x-10'>
-        <Form.Item label={t('first_name')} className='!ml-10'>
-          <Input placeholder={t('enter_first_name')} className='font-noto'/>
+      <div className='grid lg:grid-cols-2 gap-6'>
+        <Form.Item label={t('first_name')} className='!ml-10 !mr-7'>
+          <Input placeholder={t('enter_first_name')} className='font-noto' />
         </Form.Item>
-        <Form.Item label={t('last_name')} className='!ml-10'>
-          <Input placeholder={t('enter_last_name')} className='font-noto'/>
+        <Form.Item label={t('last_name')} className='!ml-10 !mr-7'>
+          <Input placeholder={t('enter_last_name')} className='font-noto' />
         </Form.Item>
-        <Form.Item label={t('country_code')} className='!ml-10'>
-          <Select placeholder={t('select_country_code')}  />
+        <Form.Item label={t('country_code')} className='!ml-10 !mr-7'>
+          <Select placeholder={t('select_country_code')} />
         </Form.Item>
       </div>
       <Divider />
-      <Typography.Title level={4} className='!mb-6 !ml-10 font-noto' >
+      <Typography.Title level={4} className='!mb-6 !ml-10 font-noto'>
         {`${t('applicant')} #2`}
       </Typography.Title>
-      <div className='grid lg:grid-cols-2 gap-x-10'>
-        <Form.Item label={t('first_name')} className='!ml-10'>
-          <Input placeholder={t('enter_first_name')} className='font-noto'/>
+      <div className='grid lg:grid-cols-2 gap-6'>
+        <Form.Item label={t('first_name')} className='!ml-10 !mr-7'>
+          <Input placeholder={t('enter_first_name')} className='font-noto' />
         </Form.Item>
-        <Form.Item label={t('last_name')} className='!ml-10'>
-          <Input placeholder={t('enter_last_name')} className='font-noto'/>
+        <Form.Item label={t('last_name')} className='!ml-10 !mr-7'>
+          <Input placeholder={t('enter_last_name')} className='font-noto' />
         </Form.Item>
-        <Form.Item label={t('country_code')} className='!ml-10'>
+        <Form.Item label={t('country_code')} className='!ml-10 !mr-7'>
           <Select placeholder={t('select_country_code')} />
         </Form.Item>
       </div>
@@ -61,14 +61,14 @@ export default function HomePage() {
       <Typography.Title level={4} className='!mb-6 !ml-10 font-noto'>
         {`${t('applicant')} #3`}
       </Typography.Title>
-      <div className='grid lg:grid-cols-2 gap-x-10'>
-        <Form.Item label={t('first_name')} className='!ml-10'>
+      <div className='grid lg:grid-cols-2 gap-6'>
+        <Form.Item label={t('first_name')} className='!ml-10 !mr-7'>
           <Input placeholder={t('enter_first_name')} className='font-noto' />
         </Form.Item>
-        <Form.Item label={t('last_name')} className='!ml-10'>
+        <Form.Item label={t('last_name')} className='!ml-10 !mr-7'>
           <Input placeholder={t('enter_last_name')} className='font-noto' />
         </Form.Item>
-        <Form.Item label={t('country_code')} className='!ml-10'>
+        <Form.Item label={t('country_code')} className='!ml-10 !mr-7'>
           <Select placeholder={t('select_country_code')} />
         </Form.Item>
       </div>
@@ -80,7 +80,7 @@ export default function HomePage() {
       <Form.Item className='text-center' name='verifyReCAPTCHA'>
         <ReCAPTCHAForm centered />
       </Form.Item>
-      <div className='text-center'>
+      <div className='text-center !mt-6 !mb-4'>
         <Link to='/result'>
           <Button type='primary' className='min-w-[300px]'>
             {t('submit')}
@@ -88,7 +88,8 @@ export default function HomePage() {
         </Link>
       </div>
     </Form>
-  )
+  );
+  
 
   const AlreadyAppliedTab = (
     <Form layout='vertical' variant='filled'>
@@ -110,9 +111,11 @@ export default function HomePage() {
           </Form.Item>
         </div>
       </div>
-      <Form.Item name='verifyReCAPTCHA'>
-        <ReCAPTCHAForm />
-      </Form.Item>
+      <div className='!ml-8'>
+        <Form.Item name='verifyReCAPTCHA'>
+          <ReCAPTCHAForm />
+        </Form.Item>
+      </div>
       <Divider />
     </Form>
   )
@@ -133,29 +136,33 @@ export default function HomePage() {
   return (
     <ContainerPageWrapper>
       <div className='flex flex-col gap-10'>
-        <Card className='!card-shadow'>
+        <Card className='!card-shadow p-6 lg:p-10'>
           <div className='grid grid-cols-1 lg:grid-cols-1 gap-6'>
             <div className='flex flex-col gap-2'>
               <Typography.Title
                 level={3}
-                className='!text-blue-primary !m-0 !mt-5 !ml-5 font-noto'
+                className='!text-blue-primary !mt-3 !ml-3 font-noto'
               >
                 {t("how_to_get_voucher_code")} <br />
-                <h1 className='mt-3' style={{ color: '#3E62AD' }}>{t("buy_2_get_1")}</h1>
+                <h1 className='mt-4' style={{ color: '#3E62AD' }}>{t("buy_2_get_1")}</h1>
                 <hr />
               </Typography.Title>
-              <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
-                <Typography.Title level={5} className='!font-normal !m-0 lg:block !ml-5'>
-                  <li className='underline mb-1'>{t("condition")}</li>
-                  <li className='ml-2'>1. {t("condition_1")}</li>
-                  <li className='ml-2'>2. {t("condition_2")}</li>
-                  <li className='ml-2' dangerouslySetInnerHTML={{ __html: `3. ${condition3}` }} />
-                  <li className='ml-2'>4. {t("condition_4")}</li>
-                  <li className='ml-2'>5. {t("condition_5")}</li>
-                  <li className='ml-2'>6. {t("condition_6")}</li>
-                  <li className='ml-2'>7. {t("condition_7")}</li>
-                </Typography.Title>
-                <img className='w-full' src='/images/ic-demo-passport.webp' alt='demo passport' />
+              <div className='flex flex-col lg:flex-row gap-6 !mb-2'>
+                <div className='flex-grow'>
+                  <Typography.Title level={5} className='!font-normal !ml-3 !m-0 lg:block'>
+                    <li className='underline mb-1'>{t("condition")}</li>
+                    <li className='ml-2'>1. {t("condition_1")}</li>
+                    <li className='ml-2'>2. {t("condition_2")}</li>
+                    <li className='ml-2' dangerouslySetInnerHTML={{ __html: `3. ${condition3}` }} />
+                    <li className='ml-2'>4. {t("condition_4")}</li>
+                    <li className='ml-2'>5. {t("condition_5")}</li>
+                    <li className='ml-2'>6. {t("condition_6")}</li>
+                    <li className='ml-2'>7. {t("condition_7")}</li>
+                  </Typography.Title>
+                </div>
+                <div className='flex-shrink-0'>
+                  <img className='w-full !mb-6 !mr-4' src='/images/ic-demo-passport.webp' alt='demo passport' />
+                </div>
               </div>
             </div>
           </div>

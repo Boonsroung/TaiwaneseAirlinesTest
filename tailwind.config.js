@@ -11,7 +11,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'], // ใช้ Roboto เป็นฟอนต์หลัก
+        sans: ['Noto Sans Thai', 'sans-serif'], // เปลี่ยนเป็น Noto Sans Thai สำหรับทั้งไทยและอังกฤษ
+        noto: ['Noto Sans', 'sans-serif'], 
       },
       fontWeight: {
         normal: 400,

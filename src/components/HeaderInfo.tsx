@@ -53,11 +53,11 @@ export default function HeaderInfo() {
         <div className='flex gap-2 items-center'>
           <Typography.Title
             level={4}
-            className={`cursor-pointer !m-0 !font-normal ${i18n.language === 'th' ? '!text-primary' : '!text-[#D8D8D8]'}`}
+            className={`cursor-pointer !m-0 ${i18n.language === 'th' ? '!text-primary' : '!text-[#D8D8D8]'}`}
             style={{ fontFamily: 'Noto Sans, sans-serif' }}
             onClick={() => changeLanguage('th')}
           >
-            ภาษาไทย
+            <p className='font-noto mt-6'>ภาษาไทย</p>
           </Typography.Title>
           <Typography.Title
             level={4}

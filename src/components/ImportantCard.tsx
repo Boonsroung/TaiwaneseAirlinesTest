@@ -13,24 +13,25 @@ export default function ImportantCard({ className }: ImportantCardProps) {
     {
       key: '0',
       label: (
-        <div className='ml-4 font-bold font-noto'>
+        <div className='ml-8 font-bold font-noto'>
           {t('disclaimers_clauses')}
         </div>
       ),
       children: (
-        <div className='bg-blue-bg p-8 font-noto'>
-          <Typography.Title level={5} className='text-center mt-0'>
+        <div className='bg-blue-bg p-4 font-noto max-h-[300px] overflow-y-auto'>
+          {/* ข้อความปฏิเสธความรับผิดชอบ */}
+          <Typography.Title level={5} className='text-center mt-2 font-noto'>
             {t('disclaimers_clauses')}
           </Typography.Title>
-          <p className='m-0 mt-6 font-noto'>
+          <p className='m-0 mt-4 font-noto'>
             {t('disclaimers_clauses_detail')}
           </p>
         </div>
       ),
       showArrow: false,
-      headerClass: 'bg-white !items-center',
+      headerClass: 'bg-white font-noto',
       extra: (
-        <Button type='primary' ghost className='border-0'>
+        <Button type='primary' ghost className='border-0 !mr-4'>
           {t('read')}
         </Button>
       )
@@ -38,16 +39,16 @@ export default function ImportantCard({ className }: ImportantCardProps) {
     {
       key: '1',
       label: (
-        <div className='ml-4 font-bold font-noto'>
+        <div className='ml-8 font-bold font-noto'>
           {t('privacy_policies')}
         </div>
       ),
       children: (
-        <div className='bg-blue-bg p-8'>
-          <Typography.Title level={5} className='text-center mt-0 font-noto'>
+        <div className='bg-blue-bg p-4 max-h-[300px] overflow-y-auto'>
+          <Typography.Title level={5} className='text-center mt-2 font-noto'>
             {t('privacy_policies')}
           </Typography.Title>
-          <p className='m-0 mt-6'>
+          <p className='m-0 mt-4 font-noto'>
             <li>1. {t('summary')}</li>
             <li>{t('summary_detail')}</li>
             <br />
@@ -218,9 +219,9 @@ export default function ImportantCard({ className }: ImportantCardProps) {
         </div>
       ),
       showArrow: false,
-      headerClass: 'bg-white !items-center',
+      headerClass: 'bg-white font-noto',
       extra: (
-        <Button type='primary' ghost className='border-0'>
+        <Button type='primary' ghost className='border-0 mr-4'>
           {t('read')}
         </Button>
       )
@@ -231,7 +232,7 @@ export default function ImportantCard({ className }: ImportantCardProps) {
     <Card
       title={
         <div className='relative'>
-          <Typography.Title level={4} className='!m-0 !text-blue-primary !ml-4 !mt-8 font-noto'>
+          <Typography.Title level={4} className='!m-0 !text-blue-primary !ml-8 !mt-10 font-noto'>
             {t('important')}
           </Typography.Title>
           <div className='bg-white px-4'>
@@ -241,9 +242,9 @@ export default function ImportantCard({ className }: ImportantCardProps) {
       }
       className={className}
       headStyle={{ borderBottom: 'none' }}
+      style={{ marginTop: '20px' }}
     >
-      <Collapse items={items} ghost accordion className='collapse-no-padding-item' />
+      <Collapse items={items} ghost accordion className='collapse-no-padding-item mb-2' />
     </Card>
-
   );
 }
